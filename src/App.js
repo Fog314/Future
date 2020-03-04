@@ -9,7 +9,9 @@ class App extends React.Component {
 	return (
 		<main>
 			<div>Hello</div>
-			<table className="sortable">
+			<table id="grid" 
+			className="table table-condensed table-hover table-striped"
+			data-toggle="bootgrid">
 					<thead>
 						<tr>
 							<th>id</th>
