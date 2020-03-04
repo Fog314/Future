@@ -9,9 +9,7 @@ class App extends React.Component {
 	return (
 		<main>
 			<div>Hello</div>
-			<table id="grid" 
-			className="table table-condensed table-hover table-striped"
-			data-toggle="bootgrid">
+			<table>
 					<thead>
 						<tr>
 							<th>id</th>
