@@ -1,27 +1,15 @@
 import React from 'react';
 import './App.scss';
 import Load from './Load';
-import Test from './Test';
-
+import DatatablePage from './DatatablePage';
 
 class App extends React.Component {
 	render(){
 	return (
 		<main>
-			<div>Hello</div>
-			<table>
-					<thead>
-						<tr>
-							<th>id</th>
-							<th>firstName</th>
-							<th>lastName</th>
-							<th>email</th>
-							<th>phone</th>
-						</tr>
-					</thead>
-					<Load />
-				</table>
-		</main>	
+		<DatatablePage load='yes'/>
+		<Load />
+		</main>
 	);
 	}
 }
