@@ -33,26 +33,6 @@ class DatatablePage extends React.Component {
       });
       }
     )
-    // let th = document.querySelectorAll('th');
-    // for (let item of th){
-		// 	item.addEventListener('click',()=>{
-    //     let i = 0;
-    //     for (let item of th){
-    //       if (item.classList === 'sorting'){
-    //         item.textContent = this.state.ge
-    //       }
-    //     }
-    //       if (item.textContent.slice(-1) !== '▼' && item.textContent.slice(-1) !== '▲'){
-    //         item.textContent = item.textContent + ' ▲';
-    //       } else if (item.textContent.slice(-1) === '▲'){
-    //         item.textContent = item.textContent.slice(0,-1) + '▼';
-    //       } else if (item.textContent.slice(-1) === '▼'){
-    //         item.textContent = item.textContent.slice(0,-1) + '▲';
-    //       }
-        
-		// 	})
-		// }
-
   }
 
   render(){
@@ -96,7 +76,6 @@ class DatatablePage extends React.Component {
     };
 
     items.map(item => (
-      console.log(data),
       data['rows'].push({
         id: item.id,
         firstName: item.firstName,
@@ -105,15 +84,21 @@ class DatatablePage extends React.Component {
         phone: item.phone,
       })
     ))
-  
+    console.log(data.columns[0].label);
     return (
-
-      <MDBDataTable
+      <div>
+        <MDBDataTable
         striped
         bordered
         entries = {50}
         data={data}
-      />
+        />
+        <Load 
+          data={data}
+        />
+      </div>
+    
+      
     );
   }
         

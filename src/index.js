@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './Game.css';
 import DatatablePage from './DatatablePage'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // ========================================
 
