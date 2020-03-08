@@ -1,3 +1,7 @@
+проект запускается из docker контейнера  docker run -p 8080:3000 fog314/future:0.0.1.
+
+Использовал bootstrap для стилизации проекта. Lodash библиотека была выбрана для удобной сортировки данных в таблице
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
