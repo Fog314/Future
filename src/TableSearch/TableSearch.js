@@ -27,11 +27,8 @@ export default props => {
         </div>
 
         <p className="text-center">
-          The search will show any matching values. If there is no match,
-          then all the data.
+          Поле сверху для фильтрации данных
         </p>
-        <p className="text-center">To sort, click on the title.</p>
-        <p className="text-center">Click on each row - view details</p>
       </>
     );
 }

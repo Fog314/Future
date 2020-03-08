@@ -5,6 +5,7 @@ import Table from './Table/Table';
 import DetailRowView from './DetailRowView/DetailRowView';
 import ModeSelector from './ModeSelector/ModeSelector';
 import TableSearch from './TableSearch/TableSearch';
+import RowAdd from './RowAdd/RowAdd';
 import _ from 'lodash';
 
 
@@ -98,7 +99,7 @@ class App extends Component {
         this.state.isLoading 
         ? <Loader />
         : <React.Fragment>
-            <TableSearch onSearch={this.searchHandler}/>
+            <TableSearch onSearch={this.searchHandler}/>	
             <Table 
               data={displayData}
               onSort={this.onSort}
@@ -106,6 +107,7 @@ class App extends Component {
               sortField={this.state.sortField}
               onRowSelect={this.onRowSelect}
             />
+			<RowAdd />
           </React.Fragment>
 
       }
