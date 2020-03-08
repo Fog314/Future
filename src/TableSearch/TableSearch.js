@@ -29,6 +29,9 @@ export default props => {
         <p className="text-center">
           Поле сверху для фильтрации данных
         </p>
+        <p className="text-center">
+          Форма для добавления данных в таблицу находится внизу страницы
+        </p>
       </>
     );
 }

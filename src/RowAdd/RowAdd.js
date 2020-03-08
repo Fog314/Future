@@ -8,7 +8,8 @@ class RowAdd extends React.Component {
         }
     }
     
-    adding(){
+    adding(event){
+        event.preventDefault();
         let tableRef = document.querySelector('table').getElementsByTagName('tbody')[0];
 
         // Insert a row in the table at the last row
@@ -42,7 +43,15 @@ class RowAdd extends React.Component {
         return (
             this.state.isShow === false
             ?<button onClick={()=>{this.state.isShow===false ?this.setState({isShow: true}) :this.setState({isShow: false})}}>Добавить</button>
-            :<div>
+            :<form>
+            <p>
+                <input style={{textAlign: 'center'}} value='id' readonly></input>
+                <input style={{textAlign: 'center'}} value='firstName' readonly></input>
+                <input style={{textAlign: 'center'}} value='lastName' readonly></input>
+                <input style={{textAlign: 'center'}} value='email' readonly></input>
+                <input style={{textAlign: 'center'}} value='phone' readonly></input>
+            </p>
+            <p>
             <input id='id'></input>
             <input id='firstName'></input>
             <input id='lastName'></input>
@@ -50,7 +59,8 @@ class RowAdd extends React.Component {
             <input id='phone'></input>
             <button onClick={this.adding}>Добавить</button>
             <button onClick={()=>{this.state.isShow===false ?this.setState({isShow: true}) :this.setState({isShow: false})}}>Закрыть</button>
-            </div>
+            </p>
+            </form>
         )
     }
 }
